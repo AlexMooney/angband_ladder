@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# AUTHOR
+
+Alex Mooney
+
+# THANKS
+
+The Angband community
+
+# TECHNOLOGY COLOPHON
+
+CSS3, HTML5
+Normalize.css, D3.js
