@@ -2,7 +2,7 @@
 
 Charts to show how your Angband runs compare to others.
 
-https://alexmooney.github.io/Angband_Ladder/
+https://alexmooney.github.io/angband_ladder/
 
 ## License
 
