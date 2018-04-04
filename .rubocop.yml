@@ -2,6 +2,11 @@ AllCops:
   Exclude:
     - 'bin/*'
 
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*_spec.rb'
+Style/EmptyMethod:
+  EnforcedStyle: expanded
 Style/FormatStringToken:
   Exclude:
     - 'Rakefile'

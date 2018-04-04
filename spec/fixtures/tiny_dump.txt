@@ -1,0 +1,14 @@
+  [Angband 9.9.9 Some stuff]
+ Class Warrior
+ Race Human
+ Some other stuff
+
+  [Indented thing in brackets]
+
+[Player history]
+  Turn   Depth  Note
+     0      0'  Began the quest to destroy Morgoth.
+   500     50'  Reached level 2
+  1500    100'  Reached level 3
+
+  More things
