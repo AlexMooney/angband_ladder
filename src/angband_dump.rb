@@ -5,12 +5,14 @@ class AngbandDump
   attr_accessor :version
   attr_accessor :profession
   attr_accessor :race
+  attr_accessor :history
 
   def initialize(file_name)
     @file_name = file_name
 
     @lines = IO.readlines("data/dumpstore/#{file_name}")
     extract_version!
+    extract_history!
   end
 
   def write!
@@ -20,5 +22,9 @@ class AngbandDump
 
   def extract_version!
     self.version = /(\w+ \d+\.\d+\.\d+)/.match(@lines[0])[1]
+  end
+
+  def extract_history!
+    self.history = 1
   end
 end

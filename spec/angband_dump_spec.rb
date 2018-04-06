@@ -25,6 +25,14 @@ RSpec.describe AngbandDump do
       expect(subject.version).to eq 'Angband 9.9.9'
     end
 
+
+    it 'knows the history of the character' do
+      expect(subject.history).not_to be_nil
+    end
+
+    context 'the character history' do
+    end
+
     describe '#write!' do
       subject { super().write! }
 
