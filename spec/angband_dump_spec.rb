@@ -21,10 +21,17 @@ RSpec.describe AngbandDump do
       subject
     end
 
-    it 'knows the version of the dumpfile' do
+    it 'knows the version of the character' do
       expect(subject.version).to eq 'Angband 9.9.9'
     end
 
+    it 'knows the class of the character' do
+      expect(subject.profession).to eq 'Warrior'
+    end
+
+    it 'knows the race of the character' do
+      expect(subject.race).to eq 'Human'
+    end
 
     it 'knows the history of the character' do
       expect(subject.history).not_to be_nil
