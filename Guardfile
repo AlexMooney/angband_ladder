@@ -7,6 +7,10 @@ guard :rspec, cmd: 'bin/rspec' do
   watch(rspec.spec_helper) { rspec.spec_dir }
   watch(rspec.spec_support) { rspec.spec_dir }
   watch(rspec.spec_files)
+
+  watch(%r{src/.+\.rb$}) do |m|
+    m[0].sub('src', 'spec').sub('.rb', '_spec.rb')
+  end
 end
 
 guard :bundler do
