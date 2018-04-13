@@ -38,6 +38,16 @@ RSpec.describe AngbandDump do
     end
 
     context 'the character history' do
+      it 'keeps an event for each level up' do
+        # rubocop:disable Style/BracesAroundHashParameters
+        expect(subject.history).to contain_exactly(
+          { turn: 0, depth: 0, level: 1 },
+          { turn: 500, depth: 50, level: 2 },
+          { turn: 700, depth: 0, level: 2 },
+          { turn: 1500, depth: 100, level: 3 }
+        )
+        # rubocop:enable Style/BracesAroundHashParameters
+      end
     end
 
     describe '#write!' do
@@ -45,6 +55,26 @@ RSpec.describe AngbandDump do
 
       it 'is defined' do
         expect(subject).to be_nil
+      end
+    end
+
+    context 'with an angband dump that has no history' do
+      let(:lines) { super().slice(0..6) }
+
+      it 'raises an exception' do
+        expect { subject }.to raise_error('Invalid player history')
+      end
+    end
+
+    context 'with an angband variant' do
+      let(:lines) do
+        lines = super()
+        lines[0] = lines[0].sub('Angband', 'ZAngband')
+        lines
+      end
+
+      it 'raises an exception' do
+        expect { subject }.to raise_error('Invalid variant')
       end
     end
   end

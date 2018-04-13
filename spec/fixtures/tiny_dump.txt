@@ -9,6 +9,7 @@
   Turn   Depth  Note
      0      0'  Began the quest to destroy Morgoth.
    500     50'  Reached level 2
+   700      0'  Killed Farmer Maggot
   1500    100'  Reached level 3
 
   More things
