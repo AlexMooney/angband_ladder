@@ -1,0 +1,8 @@
+languate: ruby
+rvm:
+  - 2.4
+install:
+  - bundle install --jobs=2 --with=test
+script:
+  - bundle exec rspec
+  - bundle exec rubocop
